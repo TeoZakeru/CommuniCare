@@ -48,6 +48,9 @@ We have developed an eye-controlled cursor system using Python's OpenCV library.
 This kind of control method provides users with an efficient way to navigate their computer, enhancing accessibility and ease of use for individuals with limited mobility.
 
 
+https://github.com/TeoZakeru/CommuniCare/assets/130887983/3d18e297-3a9b-4e3b-982c-bcb0beda0538
+
+
 We have developed a specialized keyboard for typing, designed to cater to the needs of users with severe mobility limitations. The keyboard features three rows, each containing ten keys. Users can select a row by blinking their eyes, utilizing the blink detection system previously described. Once a row is selected, the user can type by using specific finger movements, detected by our previously trained AI models.
 
 This approach combines eye blinks and finger movements to provide an efficient and user-friendly typing experience. By leveraging the capabilities of our advanced AI models, we ensure that users can communicate effectively and with minimal effort, despite their physical limitations.
