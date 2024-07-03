@@ -31,6 +31,10 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/345544d2-329b-42b0-a02
 
 - As a result of this rigorous training process, our AI model can accurately detect whether the hand is lifted or if just a specific finger, such as the index finger, is raised. The model is sensitive enough to detect minimal movements, ensuring that even the slightest gestures are recognized. This precision is particularly important for providing reliable control mechanisms for paralyzed patients.
 ## **Features Implemented Until Now**
+
+
+https://github.com/TeoZakeru/CommuniCare/assets/130887983/20d78fef-2c9d-4a59-90b1-a86107867a54
+
 We implemented a sophisticated Blink Detection feature that enables our system to accurately detect when a user blinks and distinguish between voluntary and involuntary blinks. This advanced capability allows blinks to be utilized for a range of practical purposes.
 
 Voluntary blinks can be used to select items on a screen or to simulate mouse clicks, thereby providing an intuitive method for users to interact with their devices. This feature enhances the overall functionality of the system, making it possible for users to perform various tasks without needing to rely on traditional input methods.
