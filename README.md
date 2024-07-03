@@ -40,6 +40,9 @@ We implemented a sophisticated Blink Detection feature that enables our system t
 Voluntary blinks can be used to select items on a screen or to simulate mouse clicks, thereby providing an intuitive method for users to interact with their devices. This feature enhances the overall functionality of the system, making it possible for users to perform various tasks without needing to rely on traditional input methods.
 
 
+https://github.com/TeoZakeru/CommuniCare/assets/130887983/6edf22cf-0a52-4368-a11d-d6ea1196e5db
+
+
 We have developed an eye-controlled cursor system using Python's OpenCV library. This system tracks the movement of the iris and moves the mouse cursor accordingly, allowing users to control their computer with eye movements.
 
 This kind of control method provides users with an efficient way to navigate their computer, enhancing accessibility and ease of use for individuals with limited mobility.
