@@ -37,9 +37,9 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/345544d2-329b-42b0-a02
 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/20d78fef-2c9d-4a59-90b1-a86107867a54
 
-We implemented a sophisticated Blink Detection feature that enables our system to accurately detect when a user blinks and distinguish between voluntary and involuntary blinks. This advanced capability allows blinks to be utilized for a range of practical purposes.
+- We implemented a sophisticated Blink Detection feature that enables our system to accurately detect when a user blinks and distinguish between voluntary and involuntary blinks. This advanced capability allows blinks to be utilized for a range of practical purposes.
 
-Voluntary blinks can be used to select items on a screen or to simulate mouse clicks, thereby providing an intuitive method for users to interact with their devices. This feature enhances the overall functionality of the system, making it possible for users to perform various tasks without needing to rely on traditional input methods.
+- Voluntary blinks can be used to select items on a screen or to simulate mouse clicks, thereby providing an intuitive method for users to interact with their devices. This feature enhances the overall functionality of the system, making it possible for users to perform various tasks without needing to rely on traditional input methods.
 
 ### **Iris Controlled Cursor**
 
@@ -47,40 +47,40 @@ Voluntary blinks can be used to select items on a screen or to simulate mouse cl
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/6edf22cf-0a52-4368-a11d-d6ea1196e5db
 
 
-We have developed an eye-controlled cursor system using Python's OpenCV library. This system tracks the movement of the iris and moves the mouse cursor accordingly, allowing users to control their computer with eye movements.
+- We have developed an eye-controlled cursor system using Python's OpenCV library. This system tracks the movement of the iris and moves the mouse cursor accordingly, allowing users to control their computer with eye movements.
 
-This kind of control method provides users with an efficient way to navigate their computer, enhancing accessibility and ease of use for individuals with limited mobility.
+- This kind of control method provides users with an efficient way to navigate their computer, enhancing accessibility and ease of use for individuals with limited mobility.
 
 ### **Finger Controlled Keyboard**
 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/3d18e297-3a9b-4e3b-982c-bcb0beda0538
 
 
-We have developed a specialized keyboard for typing, designed to cater to the needs of users with severe mobility limitations. The keyboard features three rows, each containing ten keys. Users can select a row by blinking their eyes, utilizing the blink detection system previously described. Once a row is selected, the user can type by using specific finger movements, detected by our previously trained AI models.
+- We have developed a specialized keyboard for typing, designed to cater to the needs of users with severe mobility limitations. The keyboard features three rows, each containing ten keys. Users can select a row by blinking their eyes, utilizing the blink detection system previously described. Once a row is selected, the user can type by using specific finger movements, detected by our previously trained AI models.
 
-This approach combines eye blinks and finger movements to provide an efficient and user-friendly typing experience. By leveraging the capabilities of our advanced AI models, we ensure that users can communicate effectively and with minimal effort, despite their physical limitations.
+- This approach combines eye blinks and finger movements to provide an efficient and user-friendly typing experience. By leveraging the capabilities of our advanced AI models, we ensure that users can communicate effectively and with minimal effort, despite their physical limitations.
 
 
 ### **Finger Controlled Messaging**
 
-The Raspberry Pi Camera detects and tracks finger movement using Mediapipe, OpenCV and picamera2 Libraries. We utilise this tracking technology to detect a finger-tap movement and keep track of number of finger taps and send a specific pre-defined message to a care-taker or any saved cotact that corresponds to a specific number of taps.
+- The Raspberry Pi Camera detects and tracks finger movement using Mediapipe, OpenCV and picamera2 Libraries. We utilise this tracking technology to detect a finger-tap movement and keep track of number of finger taps and send a specific pre-defined message to a care-taker or any saved cotact that corresponds to a specific number of taps.
 
 #### **One-Tap Message**
 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/8d2c987c-0217-4aaf-b94a-b458282d3797
 
-One Tap here corresponds to Food.
+- One Tap here corresponds to Food.
 
 #### **Two-Tap Message**
 
 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/05e14df8-3bc5-456a-b755-14167367f305
 
-Two Taps here correspond to Emergency
+- Two Taps here correspond to Emergency
 
 #### ***Three-Tap Message**
 
 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/fe3fd8c7-926c-4ebb-92c5-b32d40232099
 
-Three Taps here correspond to TV.
+- Three Taps here correspond to TV.
