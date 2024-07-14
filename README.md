@@ -112,7 +112,7 @@ https://github.com/user-attachments/assets/88f382d7-fc6f-40f3-97cf-9d7b0e09ec85
 - In this method, we have a simple python code that streams the live footage from the camera module onto a website with a Flask backend, which can be received by a server/computer that can perform the required operations and execute the required code on the received video footage.
 
 - For this, we need a computer/display for configuration as well as usage as demonstrated in the below videos.
-- 
+  
 ### Device Overview
  
 - This document provides an overview of the various modules and command sets used in the device, along with information on the built-in tutorial interface.
@@ -163,6 +163,7 @@ https://github.com/user-attachments/assets/53eecfea-4541-4391-8ca4-15c31870d944
 
 #### Interface Demo
 
+https://github.com/user-attachments/assets/7792552c-fc75-48eb-af72-08a4538c21af
 
 ## **Working 2 - ( doesn't require a computer for usage but requires a computer for configuration)**
 
