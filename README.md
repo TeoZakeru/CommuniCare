@@ -93,9 +93,11 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/fe3fd8c7-926c-4ebb-92c
 
 ## **Product Overview**
 
-
+https://github.com/user-attachments/assets/7caa12ff-fb41-40ef-8b44-4c9b46183124
 
 ## **Product Setup**
+
+https://github.com/user-attachments/assets/88f382d7-fc6f-40f3-97cf-9d7b0e09ec85
 
 - This is the setup that we are using for our product. The Raspberry Pi Zero 2 W is coupled with the Camera Module and enclosed within a cardboard box with an opening for a power supply. This cardboard box can be attached to any holder. We have used a tripod stand here. The device can be configured to work with any bluetooth-enabled speaker if you want the sound to be heard out loud or to a wireless bluetooth headset if the voice is intended to be heard by only one person. We have used a speaker here.
 
@@ -107,10 +109,10 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/fe3fd8c7-926c-4ebb-92c
 
 ## **Working 1 - ( requires a Computer)**
 
-- In this method, we have a simple python code that streams the live footage from the camera module onto a website with a Flask backend, which can be received by a server/computer that can perform the required operations and exeute the required code on the received video footage.
+- In this method, we have a simple python code that streams the live footage from the camera module onto a website with a Flask backend, which can be received by a server/computer that can perform the required operations and execute the required code on the received video footage.
 
 - For this, we need a computer/display for configuration as well as usage as demonstrated in the below videos.
-
+- 
 ### Device Overview
  
 - This document provides an overview of the various modules and command sets used in the device, along with information on the built-in tutorial interface.
@@ -155,36 +157,48 @@ These modules are integrated into the main GUI to perform various tasks:
 
 - The interface includes a built-in tutorial designed to instruct users on how to operate the device. This feature eliminates the need for a specialized person to configure everything, ensuring that users can independently set up and use the device efficiently.
 
+#### Streaming Demo
+
+https://github.com/user-attachments/assets/53eecfea-4541-4391-8ca4-15c31870d944
+
+#### Interface Demo
+
+
 ## **Working 2 - ( doesn't require a computer for usage but requires a computer for configuration)**
 
 - In this method, we have a python code that runs on the Raspberry Pi Zero 2 W that first configures the code to track the movement of a hand and detect taps.
 
 - We need a computer to visualize the configuration.
 
-- Configuration Step:
+### Configuration Step:
 
-	- First, keep your hand steady.
-	- Then, lift your Thumb.
-	- Then, lift your Index Finger.
-	- Then, lift your Middle Finger.
-	- Then, lift your Ring Finger.
-	- Then, lift your Pinky Finger
-	- Now, Configuration Step is completed. You can disconnect the computer and your device is ready to communicate.
+https://github.com/user-attachments/assets/9baffcac-1528-4c28-a81a-7b657b8cff5d
+
+
+- First, keep your hand steady.
+- Then, lift your Thumb.
+- Then, lift your Index Finger.
+- Then, lift your Middle Finger.
+- Then, lift your Ring Finger.
+- Then, lift your Pinky Finger
+- Now, Configuration Step is completed. You can disconnect the computer and your device is ready to communicate.
 	
-- Communication Step:
+### Communication Step:
 
-	- The message sent from the device to the speaker/headset depends on the number of taps of hand
+https://github.com/user-attachments/assets/079142d3-7845-4e41-9ae5-32f4d31504dc
+
+- The message sent from the device to the speaker/headset depends on the number of taps of hand
+
+	- One tap doesn't mean anything as sometimes the patient may tap accidently.
+
+	- Two taps convey the message "Food"
+
+	- Three taps convey the message "Emergency"
+
+	- Four taps convey the message "Water"
+
+	- Five taps convey the message "Turn Off the Light"
+
+	- Six taps convey the message "Help"
 	
-		- One tap doesn't mean anything as sometimes the patient may tap accidently.
-
-		- Two taps convey the message "Food"
-
-		- Three taps convey the message "Emergency"
-
-		- Four taps convey the message "Water"
-
-		- Five taps convey the message "Turn Off the Light"
-
-		- Six taps convey the message "Help"
-		
-	- The message can also be accessed on any device connected to the same Wi-Fi network as the Raspberry Pi Zero 2 W by accessing the following link: http://<raspberry_pi_ip_address>:5000 , where the raspberry_pi_ip_address refers to the IP Address of the Raspberry Pi Zero 2 W.
+- The message can also be accessed on any device connected to the same Wi-Fi network as the Raspberry Pi Zero 2 W by accessing the following link: http://<raspberry_pi_ip_address>:5000 , where the raspberry_pi_ip_address refers to the IP Address of the Raspberry Pi Zero 2 W.
