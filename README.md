@@ -15,7 +15,7 @@ The CommuniCare employs a camera to detect finger or eye movements, translating 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/345544d2-329b-42b0-a027-b75c48721132
 
 
-## **Tasks Completed Until Now**
+## **Training Phase**
 ### **Model Training**
 
 - To ensure our system can accurately detect and classify various hand movements, we undertook a comprehensive data collection process. We gathered a diverse dataset of hand orientations and finger movements, specifically focusing on minimal movements that individuals with severe paralysis can perform.
@@ -30,7 +30,7 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/345544d2-329b-42b0-a02
 ### **Detection Capabilities**
 
 - As a result of this rigorous training process, our AI model can accurately detect whether the hand is lifted or if just a specific finger, such as the index finger, is raised. The model is sensitive enough to detect minimal movements, ensuring that even the slightest gestures are recognized. This precision is particularly important for providing reliable control mechanisms for paralyzed patients.
-## **Features Implemented Until Now**
+## **Testing Phase**
 
 ### **Blink Detection**
 
@@ -78,20 +78,22 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/05e14df8-3bc5-456a-b75
 
 - Two Taps here correspond to Emergency
 
-#### ***Three-Tap Message**
+#### **Three-Tap Message**
 
 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/fe3fd8c7-926c-4ebb-92c5-b32d40232099
 
 - Three Taps here correspond to TV.
 
-# **Product Demo**
-
-## ***Product Overview***
 
 
+# **Final Phase - Product Demo**
 
-## ***Product Setup***
+## **Product Overview**
+
+
+
+## **Product Setup**
 
 - This is the setup that we are using for our product. The Raspberry Pi Zero 2 W is coupled with the Camera Module and enclosed within a cardboard box with an opening for a power supply. This cardboard box can be attached to any holder. We have used a tripod stand here. The device can be configured to work with any bluetooth-enabled speaker if you want the sound to be heard out loud or to a wireless bluetooth headset if the voice is intended to be heard by only one person. We have used a speaker here.
 
@@ -101,7 +103,7 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/fe3fd8c7-926c-4ebb-92c
 
 - For both ways, we have to first access the Bluetooth settings and add the speaker/headset as the main audio output device. This can be done in 2 ways - through the Terminal or via VNC.
 
-## ***Working 1 - ( requires a Computer)***
+## **Working 1 - ( requires a Computer)**
 
 - In this method, we have a simple python code that streams the live footage from the camera module onto a website with a Flask backend, which can be received by a server/computer that can perform the required operations and exeute the required code on the received video footage.
 
@@ -151,7 +153,7 @@ These modules are integrated into the main GUI to perform various tasks:
 
 - The interface includes a built-in tutorial designed to instruct users on how to operate the device. This feature eliminates the need for a specialized person to configure everything, ensuring that users can independently set up and use the device efficiently.
 
-### ***Code for Working1***
+### **Code for Working1**
 
 #### config.py
 
@@ -1969,16 +1971,62 @@ def main():
 
 if __name__ == "__main__":
     main()
-        
-        
-        
-        
-        
-        
-        
-    
 ```
-## ***Working 2 - ( doesn't require a computer for usage but requires a computer for configuration)***
+
+#### stream.py
+
+```
+from flask import Flask, Response, render_template_string
+from picamera2 import Picamera2
+import cv2
+
+app = Flask(__name__)
+
+# Initialize the camera
+picam2 = Picamera2()
+picam2.configure(picam2.create_preview_configuration(main={"size": (640, 480)}))  # Set the resolution
+picam2.start()
+
+# HTML template for streaming
+html_template = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raspberry Pi Camera Stream</title>
+</head>
+<body>
+    <h1>Raspberry Pi Camera Stream</h1>
+    <img src="{{ url_for('video_feed') }}">
+</body>
+</html>
+"""
+
+def generate_frames():
+    while True:
+        # Capture frame-by-frame
+        frame = picam2.capture_array()
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+        # Encode the frame in JPEG format
+        ret, buffer = cv2.imencode('.jpg', frame)
+        frame = buffer.tobytes()
+
+        # Yield the frame as a byte stream
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+@app.route('/')
+def index():
+    return render_template_string(html_template)
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+## **Working 2 - ( doesn't require a computer for usage but requires a computer for configuration)**
 
 - In this method, we have a python code that runs on the Raspberry Pi Zero 2 W that first configures the code to track the movement of a hand and detect taps.
 
@@ -2012,7 +2060,7 @@ if __name__ == "__main__":
 		
 	- The message can also be accessed on any device connected to the same Wi-Fi network as the Raspberry Pi Zero 2 W by accessing the following link: http://<raspberry_pi_ip_address>:5000 , where the raspberry_pi_ip_address refers to the IP Address of the Raspberry Pi Zero 2 W.
 	
-### ***Code for Working2***
+### **Code for Working2**
 
 #### rasp.py
 
