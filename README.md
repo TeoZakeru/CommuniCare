@@ -10,12 +10,13 @@ The CommuniCare employs a camera to detect finger or eye movements, translating 
 
 ## **Operational Workflow Diagram**
 ![Workflow Diagram](assets/flowchart.png)
-## **Model Training Video**
+
+## **Training Phase**
+
+### **Model Training Video**
 
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/345544d2-329b-42b0-a027-b75c48721132
 
-
-## **Training Phase**
 ### **Model Training**
 
 - To ensure our system can accurately detect and classify various hand movements, we undertook a comprehensive data collection process. We gathered a diverse dataset of hand orientations and finger movements, specifically focusing on minimal movements that individuals with severe paralysis can perform.
@@ -30,6 +31,7 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/345544d2-329b-42b0-a02
 ### **Detection Capabilities**
 
 - As a result of this rigorous training process, our AI model can accurately detect whether the hand is lifted or if just a specific finger, such as the index finger, is raised. The model is sensitive enough to detect minimal movements, ensuring that even the slightest gestures are recognized. This precision is particularly important for providing reliable control mechanisms for paralyzed patients.
+
 ## **Testing Phase**
 
 ### **Blink Detection**
