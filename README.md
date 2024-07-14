@@ -84,3 +84,58 @@ https://github.com/TeoZakeru/CommuniCare/assets/130887983/05e14df8-3bc5-456a-b75
 https://github.com/TeoZakeru/CommuniCare/assets/130887983/fe3fd8c7-926c-4ebb-92c5-b32d40232099
 
 - Three Taps here correspond to TV.
+
+# **Product Demo**
+
+## ***Product Overview***
+
+
+
+## ***Product Setup***
+
+- This is the setup that we are using for our product. The Raspberry Pi Zero 2 W is coupled with the Camera Module and enclosed within a cardboard box with an opening for a power supply. This cardboard box can be attached to any holder. We have used a tripod stand here. The device can be configured to work with any bluetooth-enabled speaker if you want the sound to be heard out loud or to a wireless bluetooth headset if the voice is intended to be heard by only one person. We have used a speaker here.
+
+- Our product can be used in 2 ways :
+	- With a computer/display for usage
+	- Without a computer/display for usage
+
+- For both ways, we have to first access the Bluetooth settings and add the speaker/headset as the main audio output device. This can be done in 2 ways - through the Terminal or via VNC.
+
+## ***Working 1 - ( requires a Computer)***
+
+- In this method, we have a simple python code that streams the live footage from the camera module onto a website with a Flask backend, which can be received by a server/computer that can perform the required operations and exeute the required code on the received video footage.
+
+- For this, we need a computer/display for configuration as well as usage as demonstrated in the below videos.
+
+## ***Working 2 - ( doesn't require a computer for usage but requires a computer for configuration)***
+
+- In this method, we have a python code that runs on the Raspberry Pi Zero 2 W that first configures the code to track the movement of a hand and detect taps.
+
+- We need a computer to visualize the configuration.
+
+- Configuration Step:
+	- First, keep your hand steady.
+	- Then, lift your Thumb.
+	- Then, lift your Index Finger.
+	- Then, lift your Middle Finger.
+	- Then, lift your Ring Finger.
+	- Then, lift your Pinky Finger
+	- Now, Configuration Step is completed. You can disconnect the computer and your device is ready to communicate.
+	
+- Communication Step:
+
+	- The message sent from the device to the speaker/headset depends on the number of taps of hand
+	
+		- One tap doesn't mean anything as sometimes the patient may tap accidently.
+
+		- Two taps convey the message "Food"
+
+		- Three taps convey the message "Emergency"
+
+		- Four taps convey the message "Water"
+
+		- Five taps convey the message "Turn Off the Light"
+
+		- Six taps convey the message "Help"
+		
+	- The message can also be accessed on any device connected to the same Wi-Fi network as the Raspberry Pi Zero 2 W by accessing the following link: http://<raspberry_pi_ip_address>:5000 , where the raspberry_pi_ip_address refers to the IP Address of the Raspberry Pi Zero 2 W.
