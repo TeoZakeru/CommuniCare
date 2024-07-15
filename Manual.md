@@ -1,4 +1,4 @@
-# Steps for initial Setup
+# Steps for Initial Setup
 
 ## Step 1: Download and Install Raspberry Pi Imager
 1. Download Raspberry Pi Imager from the official Raspberry Pi website.
@@ -38,3 +38,35 @@
 1. Download and install VNC Viewer on your computer from the RealVNC website.
 2. Open VNC Viewer and enter the IP address of your Raspberry Pi.
 3. Connect and log in with the username pi and the password you set.
+
+# Steps to change the swap space **(IMPORTANT)**
+
+## 1. Open a Terminal
+- You can access your Raspberry Pi via SSH.
+
+## 2. Edit the Swap File Configuration
+1. Open the dphys-swapfile configuration file:
+   ```
+   sudo nano /etc/dphys-swapfile
+   ```
+## 3. Change the Swap Size
+1. Locate the line:
+```CONF_SWAPSIZE=100```
+2. Replace with the below line
+```CONF_SWAPSIZE=1024```
+
+## 4. Save and Exit
+1. Press Ctrl + X to exit.
+2. Press Y to confirm saving the changes.
+3. Press Enter to save the file.
+
+## 5. Restart the System
+1. Restart the system to apply the changes:
+```sudo reboot```
+## 6. Verify the Swap Space
+Check the current swap space to confirm the change:
+```free -h```
+
+# Steps for using Method -  1
+
+## Step 1: I
