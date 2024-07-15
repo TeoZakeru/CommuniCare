@@ -22,9 +22,19 @@
 3. Give it a couple of minutes to boot and connect to your Wi-Fi network.
 4. Find the IP address of your Raspberry Pi.
 
-## Step 4:Connect via SSH
+## Step 4: Connect via SSH
 1. Open a terminal (Linux/Mac) or Command Prompt (Windows).
 2. Use the ssh command to connect to your Raspberry Pi:
 ``` ssh <username>@<IP_ADDRESS> ```
 - Replace <IP_ADDRESS> with the actual IP address and <username> with the actual username of your Raspberry Pi.
 3. Enter the password you set during the configuration.
+
+## Step 5: Enable VNC
+1. Enable the VNC server:
+ ```sudo raspi-config```
+2. Navigate to Interfacing Options -> VNC -> Yes to enable VNC and similarly enable One-Wire.
+
+## Step 6: Connect via VNC
+1. Download and install VNC Viewer on your computer from the RealVNC website.
+2. Open VNC Viewer and enter the IP address of your Raspberry Pi.
+3. Connect and log in with the username pi and the password you set.
