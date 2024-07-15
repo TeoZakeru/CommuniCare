@@ -163,6 +163,8 @@ https://github.com/user-attachments/assets/53eecfea-4541-4391-8ca4-15c31870d944
 
 #### Interface Demo
 
+- **Turn on the Volume**
+
 https://github.com/user-attachments/assets/7792552c-fc75-48eb-af72-08a4538c21af
 
 ## **Working 2 - ( doesn't require a computer for usage but requires a computer for configuration)**
