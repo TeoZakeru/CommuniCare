@@ -25,14 +25,18 @@
 ## Step 4: Connect via SSH
 1. Open a terminal (Linux/Mac) or Command Prompt (Windows).
 2. Use the ssh command to connect to your Raspberry Pi:
-``` ssh <username>@<IP_ADDRESS> ```
+```
+ssh <username>@<IP_ADDRESS>
+```
 - Replace <IP_ADDRESS> with the actual IP address and <username> with the actual username of your Raspberry Pi.
 3. Enter the password you set during the configuration.
 
 ## Step 5: Enable VNC
 1. Enable the VNC server:
- ```sudo raspi-config```
-2. Navigate to Interfacing Options -> VNC -> Yes to enable VNC and similarly enable One-Wire.
+ ```
+sudo raspi-config
+```
+3. Navigate to Interfacing Options -> VNC -> Yes to enable VNC and similarly enable One-Wire.
 
 ## Step 6: Connect via VNC
 1. Download and install VNC Viewer on your computer from the RealVNC website.
@@ -62,11 +66,58 @@
 
 ## 5. Restart the System
 1. Restart the system to apply the changes:
-```sudo reboot```
+ ```
+ sudo reboot
+ ```
 ## 6. Verify the Swap Space
-Check the current swap space to confirm the change:
-```free -h```
+1. Check the current swap space to confirm the change:
+ ```
+ free -h
+ ```
 
-# Steps for using Method -  1
+# Device Configuration Steps for using Method -  1
 
-## Step 1: I
+## Step 1: Update the package list:
+```
+sudo apt update
+sudo apt full-upgrade
+```
+## Step 2: Installing the required Libraries:
+```
+sudo apt-get install python3-opencv Flask libcamera-apps libcamera-dev picamera2
+```
+
+## Step 3: Running the code:
+```
+python3 stream.py
+```
+
+# Device Configuration Steps for using Method -  2
+
+## Step 1: Update the package list:
+```
+sudo apt update
+sudo apt full-upgrade
+```
+## Step 2: Installing the required Libraries on device:
+```
+sudo apt-get install python3-opencv Flask libcamera-apps libcamera-dev picamera2
+```
+## Step 3: Installing libraries on Virtual Environment
+1. Create a Virtual Environment
+   ```
+   python3 -m venv <name> --system-site-packages
+   ```
+2. Access the Virtual Environment
+   ```
+   source <name>/bin/activate
+   ```
+3. Install the required libraries
+   ```
+   pip install mediapipe pyttsx4 numpy
+   ```
+## Step 4: Running the code:
+1. While in the Virtual Environment, run the below code
+ ```
+ python3 rasp.py
+ ```
